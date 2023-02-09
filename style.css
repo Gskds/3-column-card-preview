@@ -1,0 +1,173 @@
+/* Custem Properties */
+:root {
+  --clr-primary-400: hsl(31, 77%, 52%);
+  --clr-primary-500: hsl(184, 100%, 22%);
+  --clr-primary-600: hsl(179, 100%, 13%);
+  --clr-nuetral-white: hsla(0, 0%, 100%, 0.75);
+  --clr-nuetral-text: hsl(0, 0%, 95%);
+
+  --ff-text: 'Lexend Deca', sans-serif;
+  --ff-heading: 'Big Shoulders Display', cursive;
+  
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-300: 1.4rem;
+
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Reset margins */
+body,
+h1,
+p,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* Typography */
+body {
+  background-color: var(--clr-nuetral-text);
+  color: var(--clr-nuetral-white);
+  font-family: var(--ff-text);
+  font-weight: var(--fw-regular);
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+}
+
+p {
+  font-size: var(--fs-300);
+}
+
+.heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+/* Utilities */
+.container {
+  padding:2em;
+  max-width: 80em;
+}
+
+.even-grid {
+  display: grid;
+}
+
+@media (min-width: 50em) {
+  .even-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.btn {
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--ff-text);
+  padding: 1em 1.8em;
+  margin-top: 10rem;
+}
+
+.btn:is(:hover, :focus) {
+  cursor: pointer;
+  border: 2px solid var(--clr-nuetral-white);
+  color: var(--clr-nuetral-white);
+}
+
+/* Card */
+.card {
+  height: 45rem;
+  padding: 3rem;
+}
+
+.sedans {
+  background-color: var(--clr-primary-400);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.suvs {
+  background-color: var(--clr-primary-500);
+}
+
+.luxury {
+  background-color: var(--clr-primary-600);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (min-width: 50em) {
+  .sedans {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .luxury {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* Buttons */
+.btn--sedans {
+  color: var(--clr-primary-400);
+}
+
+.btn--sedans:is(:hover, :focus) {
+  background-color: var(--clr-primary-400);
+}
+
+.btn--suvs {
+  color: var(--clr-primary-500);
+}
+
+.btn--suvs:is(:hover, :focus) {
+  background-color: var(--clr-primary-500);
+}
+
+.btn--luxury {
+  color: var(--clr-primary-600);
+}
+
+.btn--luxury:is(:hover, :focus) {
+  background-color: var(--clr-primary-600);
+}
