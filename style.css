@@ -82,7 +82,7 @@ p {
 /* Utilities */
 .container {
   padding:2em;
-  max-width: 80em;
+  max-width: 100em;
 }
 
 .even-grid {
