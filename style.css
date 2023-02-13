@@ -82,7 +82,7 @@ p {
 /* Utilities */
 .container {
   padding:2em;
-  max-width: 100em;
+  max-width: 95em;
 }
 
 .even-grid {
@@ -115,7 +115,7 @@ p {
 
 /* Card */
 .card {
-  height: 52rem;
+  height: 49rem;
   padding: 3rem;
 }
 
